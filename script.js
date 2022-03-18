@@ -67,7 +67,7 @@ let gameBoard = {
         let index = this.getCellIndex(cell);
         this.gameBoard[index] = this.currentPlayer.type;
         this.changeCurrentPlayer();
-        this._render();
+        this._render(cell);
         console.log(`current Board State: ${this.gameBoard}`);
 
     },
@@ -78,15 +78,8 @@ let gameBoard = {
             this.currentPlayer = players.firstPlayer;
         }
     },
-    _render: function() {
-        let marks = this.gameBoard;
-        marks.forEach((mark, i) => {
-            if (mark) {
-                console.log(i)
-                let element = players.elementFactory.createElement(mark).shape;
-                this.cells[i].appendChild(element);
-            }  
-        })
+    _render: function(cell) {
+        cell.appendChild(this.currentPlayer.shape);
     }
 }
 players.init()

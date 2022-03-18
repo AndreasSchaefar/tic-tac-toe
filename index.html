@@ -4,9 +4,23 @@
     <meta charset="UTF-8">    
     <link rel="stylesheet" href="css/style.css">
     <script src="script.js" defer></script>
+    <script src="script_2.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
+    <div class="modal-container">
+        <div id="modal-1" class="modal">
+            <div class="modal-options">
+                <div class="cell">
+                    <div class="cross" id="modal-select-X"></div>
+                </div>
+                <div class="cell">
+                    <div class="nought" id="modal-select-O"></div>
+                </div>
+            </div>
+            <p class="modal-para">Player 1 Select Your Marker</p>
+        </div>     
+    </div>
     <div class="container">
         <div class="game">
             <div class="cell"></div>
@@ -26,14 +40,14 @@
             <span class="time-bar"></span>
         </div>
         <div class="players">
-            <div class="cell player">
-                <img src="images/man.png" alt="player 1" id="player--one">
+            <div class="cell player" id="player-1">
+                <img src="images/man.png" alt="player 1" id="player-1-input">
                 <div class="player__name">
                     <input type="text" name="playerOne" id="playerOne" placeholder="Player 1" value="Player 1" class="player__input">
                 </div>
             </div>
-            <div class="cell player">
-                <img src="images/woman.png" alt="player 2" id="player--two">
+            <div class="cell player" id="player-2">
+                <img src="images/woman.png" alt="player 2" id="player-2-input">
                 <div class="player__name">
                     <input type="text" name="playerTwo" id="playerTwo" placeholder="Player 2" value="Player 2" class="player__input">
                 </div>
