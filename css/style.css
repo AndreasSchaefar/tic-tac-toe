@@ -194,18 +194,25 @@ body {
     height: 100%;
     background-color: #0000008c;
     z-index: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 .modal {
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #faf5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    border-radius: 12px;
 }
 
 .modal-options {
@@ -216,5 +223,28 @@ body {
 .modal-para {
     font-size: 2rem;
     font-weight: 500;
-    color: white;
+    color: rgba(0, 0, 0, .7);
+}
+
+.modal-options > .cell > .cross, 
+.modal-options > .cell > .nought {
+    cursor: pointer;
+}
+
+.modal-options > .cell > img {
+    cursor: pointer;
+}
+
+.cell-image {
+    width: 80%;
+}
+
+#modal-1 {
+    /* display: none; */
+    z-index: 1;
+}
+
+#modal-2 {
+    z-index: -1;
+    /* display: none; */
 }

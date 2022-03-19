@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">    
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
-    <script src="script_2.js" defer></script>
+    <script src="scripts/pubsub.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
+    <script src="scripts/game.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -12,13 +13,24 @@
         <div id="modal-1" class="modal">
             <div class="modal-options">
                 <div class="cell">
-                    <div class="cross" id="modal-select-X"></div>
+                    <div class="cross option" id="X"></div>
                 </div>
                 <div class="cell">
-                    <div class="nought" id="modal-select-O"></div>
+                    <div class="nought option" id="O"></div>
                 </div>
             </div>
             <p class="modal-para">Player 1 Select Your Marker</p>
+        </div>
+        <div id="modal-2" class="modal">
+            <p class="modal-para">Player 2 Are You Even a Human?</p>
+            <div class="modal-options">
+                <div class="cell">
+                    <img src="images/yes.png" alt="Yes!" class="cell-image option" id="modal-select-human">
+                </div>
+                <div class="cell">
+                    <img src="images/chip.png" alt="Yes!" class="cell-image option" id="modal-select-computer">
+                </div>
+            </div>
         </div>     
     </div>
     <div class="container">
