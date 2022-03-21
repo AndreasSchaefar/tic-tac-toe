@@ -22,7 +22,7 @@ let modal = (function() {
     // Events functions
 
     function getSelectedMarker(event) {
-        let selectedMarker = event.target.id;
+        let selectedMarker = event.target.id === "X" ? "cross" : "nought";
         removeInitialModal();
         pubsub.publish("markerSelected", selectedMarker);
     }
@@ -31,7 +31,7 @@ let modal = (function() {
         let selectedType = event.target.id === "modal-select-human" ? "human" : "computer";
         removeModalContainer();
         pubsub.publish("playerTypeSelected", selectedType)
-        pubsub.publish("gameStarted", )
+        pubsub.publish("gameStarted")
     }
 
     // Events Removing functions
